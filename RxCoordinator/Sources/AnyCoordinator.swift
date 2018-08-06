@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class AnyCoordinator<AnyRoute: Route>: Coordinator {
+open class AnyCoordinator<AnyRoute: Route>: Coordinator {
     public typealias CoordinatorRoute = AnyRoute
 
     private let _context: () -> UIViewController
