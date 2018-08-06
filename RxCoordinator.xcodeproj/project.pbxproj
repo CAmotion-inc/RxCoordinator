@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		15D57C14F36441EFABAB45EF /* Pods_RxCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1FFC2512856697D4549784 /* Pods_RxCoordinator.framework */; };
 		5D6FF8FC951132AEDC65E8CF /* Pods_RxCoordinatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C06B27ABF1F374CC63A400F /* Pods_RxCoordinatorTests.framework */; };
 		9B490E0B20ADFE4F00436E6B /* AnyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B490E0820ADFE4E00436E6B /* AnyCoordinator.swift */; };
 		9B490E0C20ADFE4F00436E6B /* BasicCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B490E0920ADFE4E00436E6B /* BasicCoordinator.swift */; };
@@ -101,7 +100,6 @@
 			files = (
 				C7CF6FF12117E0E6002AE787 /* RxCocoa.framework in Frameworks */,
 				C7CF6FF32117E0E6002AE787 /* RxSwift.framework in Frameworks */,
-				15D57C14F36441EFABAB45EF /* Pods_RxCoordinator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
