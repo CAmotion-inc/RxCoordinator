@@ -137,7 +137,7 @@ extension Coordinator {
 
     // MARK: Helpers
 
-    func performTransition<T>(_ transition: Transition<T>, with options: TransitionOptions) -> TransitionObservables {
+    public func performTransition<T>(_ transition: Transition<T>, with options: TransitionOptions) -> TransitionObservables {
         switch transition.type {
         case let transitionType as TransitionTypeVC:
             switch transitionType {
