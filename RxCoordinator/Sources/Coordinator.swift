@@ -30,7 +30,10 @@ extension Coordinator {
     }
 
     var navigationController: UINavigationController {
-        return viewController as! UINavigationController
+        if let navigationController = viewController as? UINavigationController {
+            return navigationController
+        }
+        return viewController.navigationController!
     }
 
     public func presented(from presentable: Presentable?) {}
