@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 open class BasicCoordinator<BasicRoute: Route>: Coordinator {
     public typealias CoordinatorRoute = BasicRoute

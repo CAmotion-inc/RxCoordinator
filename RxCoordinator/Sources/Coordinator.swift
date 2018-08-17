@@ -52,6 +52,11 @@ extension Coordinator {
 
     // MARK: Transitions
 
+    func presentAlert(_ viewController: UIViewController, with options: TransitionOptions) -> TransitionObservables {
+        rootViewController.present(viewController, animated: options.animated, completion: nil)
+        return TransitionObservables(presentation: .empty(), dismissal: .empty())
+    }
+
     func present(_ viewController: UIViewController, with options: TransitionOptions, animation: Animation?) -> TransitionObservables {
         let presentationObservable = self.presentationObservable(for: viewController)
         let dismissalObservable = self.dismissalObservable(for: viewController)
@@ -144,6 +149,9 @@ extension Coordinator {
         switch transition.type {
         case let transitionType as TransitionTypeVC:
             switch transitionType {
+            case .presentAlert(let presentable):
+                presentable.presented(from: self)
+                return presentAlert(presentable.viewController, with: options)
             case .present(let presentable):
                 presentable.presented(from: self)
                 return present(presentable.viewController, with: options, animation: transition.animation)
@@ -159,6 +167,9 @@ extension Coordinator {
             }
         case let transitionType as TransitionTypeNC:
             switch transitionType {
+            case .presentAlert(let presentable):
+                presentable.presented(from: self)
+                return presentAlert(presentable.viewController, with: options)
             case .push(let presentable):
                 presentable.presented(from: self)
                 return push(presentable.viewController, with: options, animation: transition.animation)

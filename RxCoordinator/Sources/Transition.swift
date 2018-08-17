@@ -12,6 +12,7 @@ import UIKit
 public protocol TransitionType {}
 
 public enum TransitionTypeVC: TransitionType {
+    case presentAlert(Presentable)
     case present(Presentable)
     case embed(presentable: Presentable, container: Container)
     case registerPeek(source: Container, transitionGenerator: () -> ViewTransition)
@@ -20,6 +21,7 @@ public enum TransitionTypeVC: TransitionType {
 }
 
 public enum TransitionTypeNC: TransitionType {
+    case presentAlert(Presentable)
     case push(Presentable)
     case present(Presentable)
     case embed(presentable: Presentable, container: Container)
