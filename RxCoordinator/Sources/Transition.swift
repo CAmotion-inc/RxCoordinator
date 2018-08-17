@@ -42,6 +42,10 @@ public typealias NavigationTransition = Transition<TransitionTypeNC>
 
 extension Transition where RootType == TransitionTypeVC {
 
+    public static func presentAlert(_ presentable: Presentable) -> Transition {
+        return Transition(type: .presentAlert(presentable), animation: nil)
+    }
+
     public static func present(_ presentable: Presentable, animation: Animation? = nil) -> Transition {
         return Transition(type: .present(presentable), animation: animation)
     }
@@ -67,6 +71,10 @@ extension Transition where RootType == TransitionTypeVC {
 }
 
 extension Transition where RootType == TransitionTypeNC {
+
+    public static func presentAlert(_ presentable: Presentable) -> Transition {
+        return Transition(type: .presentAlert(presentable), animation: nil)
+    }
 
     public static func present(_ presentable: Presentable, animation: Animation? = nil) -> Transition {
         return Transition(type: .present(presentable), animation: animation)
