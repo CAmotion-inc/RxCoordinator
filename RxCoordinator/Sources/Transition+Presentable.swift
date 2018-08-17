@@ -13,6 +13,8 @@ extension Transition {
         switch type {
         case let transitionType as TransitionTypeVC:
             switch transitionType {
+            case .presentAlert(let presentable):
+                return presentable
             case .present(let presentable):
                 return presentable
             case .embed(let presentable, _):
@@ -24,6 +26,8 @@ extension Transition {
             }
         case let transitionType as TransitionTypeNC:
             switch transitionType {
+            case .presentAlert(let presentable):
+                return presentable
             case .push(let presentable):
                 return presentable
             case .present(let presentable):
