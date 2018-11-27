@@ -12,6 +12,7 @@ import UIKit
 public protocol TransitionType {}
 
 public enum TransitionTypeVC: TransitionType {
+    case bump(Presentable)
     case presentAlert(Presentable)
     case present(Presentable)
     case embed(presentable: Presentable, container: Container)
@@ -21,6 +22,7 @@ public enum TransitionTypeVC: TransitionType {
 }
 
 public enum TransitionTypeNC: TransitionType {
+    case bump(Presentable)
     case presentAlert(Presentable)
     case push(Presentable)
     case present(Presentable)
@@ -41,6 +43,10 @@ public typealias ViewTransition = Transition<TransitionTypeVC>
 public typealias NavigationTransition = Transition<TransitionTypeNC>
 
 extension Transition where RootType == TransitionTypeVC {
+
+    public static func bump(_ presentable: Presentable) -> Transition {
+        return Transition(type: .bump(presentable), animation: nil)
+    }
 
     public static func presentAlert(_ presentable: Presentable) -> Transition {
         return Transition(type: .presentAlert(presentable), animation: nil)
@@ -71,6 +77,10 @@ extension Transition where RootType == TransitionTypeVC {
 }
 
 extension Transition where RootType == TransitionTypeNC {
+
+    public static func bump(_ presentable: Presentable) -> Transition {
+        return Transition(type: .bump(presentable), animation: nil)
+    }
 
     public static func presentAlert(_ presentable: Presentable) -> Transition {
         return Transition(type: .presentAlert(presentable), animation: nil)
