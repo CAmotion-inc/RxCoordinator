@@ -74,13 +74,9 @@ extension Coordinator {
     }
 
     func dismiss(with options: TransitionOptions, animation: Animation?) -> TransitionObservables {
-        rootViewController.transitioningDelegate = animation
-
-        let transitionObservable = Observable<Void>.empty()
-
-        context.dismiss(animated: options.animated, completion: nil)
-
-        return TransitionObservables(presentation: transitionObservable, dismissal: transitionObservable)
+        context.presentedViewController?.transitioningDelegate = animation
+        context.presentedViewController?.dismiss(animated: true, completion: nil)
+        return TransitionObservables(presentation: .empty(), dismissal: .empty())
     }
 
     func embed(_ viewController: UIViewController, in container: Container, with options: TransitionOptions) -> TransitionObservables {
