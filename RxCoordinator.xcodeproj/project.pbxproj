@@ -13,6 +13,7 @@
 		9B490E0D20ADFE4F00436E6B /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B490E0A20ADFE4F00436E6B /* Route.swift */; };
 		C7CF6FF12117E0E6002AE787 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7CF6FF02117E0E6002AE787 /* RxCocoa.framework */; };
 		C7CF6FF32117E0E6002AE787 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7CF6FF22117E0E6002AE787 /* RxSwift.framework */; };
+		C7EB1AAB22019F9900EC7415 /* Coordinator+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EB1AAA22019F9900EC7415 /* Coordinator+Rx.swift */; };
 		DC0942672097393C0067ECAC /* RxCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC09425D2097393C0067ECAC /* RxCoordinator.framework */; };
 		DC09426C2097393C0067ECAC /* RxCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC09426B2097393C0067ECAC /* RxCoordinatorTests.swift */; };
 		DC09426E2097393C0067ECAC /* RxCoordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = DC0942602097393C0067ECAC /* RxCoordinator.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -69,6 +70,7 @@
 		9B490E0A20ADFE4F00436E6B /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		C7CF6FF02117E0E6002AE787 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7CF6FF22117E0E6002AE787 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7EB1AAA22019F9900EC7415 /* Coordinator+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Coordinator+Rx.swift"; sourceTree = "<group>"; };
 		DC09425D2097393C0067ECAC /* RxCoordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCoordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC0942602097393C0067ECAC /* RxCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxCoordinator.h; sourceTree = "<group>"; };
 		DC0942612097393C0067ECAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				DC09427B20973A980067ECAC /* Container.swift */,
 				DC09428820973C570067ECAC /* Coordinator.swift */,
 				F63983DB21037708008E3D9A /* CoordinatorPreviewingDelegateObject.swift */,
+				C7EB1AAA22019F9900EC7415 /* Coordinator+Rx.swift */,
 				DCB29654209B164E00698A44 /* InteractiveTransitionAnimation.swift */,
 				DCB2964B209B156B00698A44 /* Presentable.swift */,
 				F601D0F920FF7979009DF7E5 /* ReferenceBox.swift */,
@@ -416,6 +419,7 @@
 				DC09427C20973A980067ECAC /* Container.swift in Sources */,
 				F63983DC21037708008E3D9A /* CoordinatorPreviewingDelegateObject.swift in Sources */,
 				9B490E0B20ADFE4F00436E6B /* AnyCoordinator.swift in Sources */,
+				C7EB1AAB22019F9900EC7415 /* Coordinator+Rx.swift in Sources */,
 				DCB2964C209B156B00698A44 /* Presentable.swift in Sources */,
 				DCB29655209B164E00698A44 /* InteractiveTransitionAnimation.swift in Sources */,
 				DCB2964F209B15E400698A44 /* TransitionAnimation.swift in Sources */,

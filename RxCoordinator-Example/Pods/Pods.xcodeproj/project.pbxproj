@@ -259,7 +259,7 @@
 		C541FE4C563F871AB2A4225C8A2DE734 /* Just.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95734B47128783C9F9A5854DA9DCA95E /* Just.swift */; };
 		C681B89175506116F24A6837D71EF842 /* PrimitiveSequence+Zip+arity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB3D2147B5094C6F4A07422E7799DAF /* PrimitiveSequence+Zip+arity.swift */; };
 		C6ED58BA2A97246AFCD06DEDAAB34252 /* SynchronizedUnsubscribeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5733E1E44C50D60DCF38266493EC90 /* SynchronizedUnsubscribeType.swift */; };
-		C7EB1AA722019B2500EC7415 /* Coordinator+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EB1AA622019B2500EC7415 /* Coordinator+Rx.swift */; };
+		C7EB1AAD2201A00E00EC7415 /* Coordinator+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EB1AAC2201A00D00EC7415 /* Coordinator+Rx.swift */; };
 		CA580864DF227E7B0B5AA122B96F3A4B /* ImmediateSchedulerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7ED63BEF7AC73AF32012A31B0025D0 /* ImmediateSchedulerType.swift */; };
 		CAC5F1CFC19272AE850D9ABBBB2644C4 /* UITabBarController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CA86472711D5AAB633F07036175D1E /* UITabBarController+Rx.swift */; };
 		CBD312B2EFBC71A62E64054BFBD9F729 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50FE5C373A9AB44DAC97A86D0214E7 /* Action.swift */; };
@@ -663,7 +663,7 @@
 		C4EB04E5E16724FAEE10E937CF8CBBF5 /* RxSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RxSwift.xcconfig; sourceTree = "<group>"; };
 		C569F8D7B9C1FB0729A07D20711527C6 /* SchedulerType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SchedulerType.swift; path = RxSwift/SchedulerType.swift; sourceTree = "<group>"; };
 		C6CA86472711D5AAB633F07036175D1E /* UITabBarController+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITabBarController+Rx.swift"; path = "RxCocoa/iOS/UITabBarController+Rx.swift"; sourceTree = "<group>"; };
-		C7EB1AA622019B2500EC7415 /* Coordinator+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Rx.swift"; sourceTree = "<group>"; };
+		C7EB1AAC2201A00D00EC7415 /* Coordinator+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Coordinator+Rx.swift"; path = "RxCoordinator/Sources/Coordinator+Rx.swift"; sourceTree = "<group>"; };
 		C87034E396418607B628A7E3653D3AF0 /* AnonymousDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnonymousDisposable.swift; path = RxSwift/Disposables/AnonymousDisposable.swift; sourceTree = "<group>"; };
 		C912B0844CF303AFD5DCCD7970F747AB /* Platform.Darwin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Platform.Darwin.swift; path = Platform/Platform.Darwin.swift; sourceTree = "<group>"; };
 		C961F88B2134C19E8C2FD2294506EF8B /* SharedSequence+Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SharedSequence+Operators.swift"; path = "RxCocoa/Traits/SharedSequence/SharedSequence+Operators.swift"; sourceTree = "<group>"; };
@@ -1282,8 +1282,8 @@
 				EFCAE4385264AA1DC484854AC4F64C8A /* BasicCoordinator.swift */,
 				FD13B901B521A6D14BEF9325C8A18936 /* Container.swift */,
 				74DF7ED5726782DD9863B6FFF1A6CF47 /* Coordinator.swift */,
-				C7EB1AA622019B2500EC7415 /* Coordinator+Rx.swift */,
 				DDC0C3FE58127551AEBFDC72C6D70CE0 /* CoordinatorPreviewingDelegateObject.swift */,
+				C7EB1AAC2201A00D00EC7415 /* Coordinator+Rx.swift */,
 				399D57AC01C1981E5E749784F18E60F9 /* InteractiveTransitionAnimation.swift */,
 				7C2097228ABA9057986F72C23DC81EDC /* Presentable.swift */,
 				5E77150DB0534FF6B08269838B5BE91F /* ReferenceBox.swift */,
@@ -1881,7 +1881,7 @@
 				6DF185B2736B9D142F6EDC83CF4A111A /* StaticTransitionAnimation.swift in Sources */,
 				B1D732417230442FA5C5F2229A681189 /* Transition+Presentable.swift in Sources */,
 				0D938800A8D17915D51D18C5F9916B0B /* Transition.swift in Sources */,
-				C7EB1AA722019B2500EC7415 /* Coordinator+Rx.swift in Sources */,
+				C7EB1AAD2201A00E00EC7415 /* Coordinator+Rx.swift in Sources */,
 				3AFDD92E70DAAAEF7B5AD043FA44F300 /* TransitionAnimation.swift in Sources */,
 				E5AB5F1A85174B111925F8C1468C6BC2 /* TransitionObservables.swift in Sources */,
 				1DD712B5BBE7884CF7B2E8EF29C1FA86 /* TransitionOptions.swift in Sources */,
