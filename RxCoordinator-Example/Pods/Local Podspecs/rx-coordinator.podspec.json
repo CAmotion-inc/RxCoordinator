@@ -4,16 +4,17 @@
   "license": {
     "type": "MIT"
   },
-  "homepage": "https://github.com/jdisho/RxCoordinator",
+  "homepage": "https://github.com/quickbirdstudios/RxCoordinator",
   "authors": {
     "Stefan Kofler": "stefan.kofler@quickbirdstudios.com"
   },
   "summary": "Navigation framework based on coordinator pattern.",
   "source": {
-    "git": "https://github.com/jdisho/RxCoordinator.git",
+    "git": "https://github.com/quickbirdstudios/RxCoordinator.git",
     "tag": "0.4.0"
   },
   "module_name": "RxCoordinator",
+  "swift_version": "4.1",
   "platforms": {
     "ios": "9.0",
     "tvos": "9.0"

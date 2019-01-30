@@ -37,6 +37,7 @@ open class BasicCoordinator<BasicRoute: Route>: Coordinator {
         self.rootVCReferenceBox.set(UINavigationController())
 
         if let initialRoute = initialRoute, initialLoadingType == .immediately {
+            print("now")
             transition(to: initialRoute)
         }
     }
