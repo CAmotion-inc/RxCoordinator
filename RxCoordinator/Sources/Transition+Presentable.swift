@@ -21,6 +21,8 @@ extension Transition {
                 return presentable
             case .embed(let presentable, _):
                 return presentable
+            case .embedIndex(let presentable, _, _):
+                return presentable
             case .dismiss, .none:
                 return nil
             case .registerPeek(_, let popTransition):
@@ -37,7 +39,9 @@ extension Transition {
             case .present(let presentable):
                 return presentable
             case .embed(let presentable, _):
-                return presentable.viewController
+                return presentable
+            case .embedIndex(let presentable, _, _):
+                return presentable
             case .registerPeek(_, let popTransition):
                 return popTransition().presentable
             case .pop, .popToRoot, .dismiss, .none:

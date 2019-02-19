@@ -21,14 +21,12 @@ extension Reactive where Base: Coordinator {
     
     public func transition(to route: Base.CoordinatorRoute, with options: TransitionOptions) -> Observable<Void> {
         let transition = route.prepareTransition(coordinator: AnyCoordinator(base))
-        print("in Transition")
         return Observable.create { [weak base] observer in
             guard let base = base else {
                 observer.onCompleted()
                 return Disposables.create()
             }
             base.performTransition(transition, with: options) {
-                print("onNext")
                 observer.onNext(())
                 observer.onCompleted()
             }

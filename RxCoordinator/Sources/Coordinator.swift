@@ -70,6 +70,21 @@ extension Coordinator {
         context.presentedViewController?.dismiss(animated: true, completion: completion)
     }
 
+    func embed(_ viewController: UIViewController, in container: Container, to index: Int, with options: TransitionOptions, completion: Completion) {
+        container.viewController.addChild(viewController)
+        
+        viewController.view.translatesAutoresizingMaskIntoConstraints = false
+        container.view.insertSubview(viewController.view, at: index)
+        
+        container.view.leadingAnchor.constraint(equalTo: viewController.view.leadingAnchor).isActive = true
+        container.view.rightAnchor.constraint(equalTo: viewController.view.rightAnchor).isActive = true
+        container.view.topAnchor.constraint(equalTo: viewController.view.topAnchor).isActive = true
+        container.view.bottomAnchor.constraint(equalTo: viewController.view.bottomAnchor).isActive = true
+        
+        viewController.didMove(toParent: container.viewController)
+        completion?()
+    }
+
     func embed(_ viewController: UIViewController, in container: Container, with options: TransitionOptions, completion: Completion) {
         container.viewController.addChild(viewController)
 
@@ -135,6 +150,9 @@ extension Coordinator {
             case .embed(let presentable, let container):
                 presentable.presented(from: self)
                 embed(presentable.viewController, in: container, with: options, completion: completion)
+            case .embedIndex(let presentable, let container, let index):
+                presentable.presented(from: self)
+                embed(presentable.viewController, in: container, to: index, with: options, completion: completion)
             case .registerPeek(let source, let transitionGenerator):
                 registerPeek(from: source.view, transitionGenerator: transitionGenerator, completion: completion)
             case .dismiss:
@@ -155,10 +173,13 @@ extension Coordinator {
                 push(presentable.viewController, with: options, animation: transition.animation, completion: completion)
             case .present(let presentable):
                 presentable.presented(from: self)
-                present(presentable.viewController, with: options, animation: transition.animation, completion: completion)
+                present(presentable.viewController, with: options, animation: transition.animation, completion: completion) 
             case .embed(let presentable, let container):
                 presentable.presented(from: self)
                 embed(presentable.viewController, in: container, with: options, completion: completion)
+            case .embedIndex(let presentable, let container, let index):
+                presentable.presented(from: self)
+                embed(presentable.viewController, in: container, to: index, with: options, completion: completion)
             case .registerPeek(let source, let transitionGenerator):
                 registerPeek(from: source.view, transitionGenerator: transitionGenerator, completion: completion)
             case .pop:

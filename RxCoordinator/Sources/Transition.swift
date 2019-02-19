@@ -16,6 +16,7 @@ public enum TransitionTypeVC: TransitionType {
     case presentAlert(Presentable)
     case present(Presentable)
     case embed(presentable: Presentable, container: Container)
+    case embedIndex(presentable: Presentable, container: Container, index: Int)
     case registerPeek(source: Container, transitionGenerator: () -> ViewTransition)
     case dismiss
     case none
@@ -27,6 +28,7 @@ public enum TransitionTypeNC: TransitionType {
     case push(Presentable)
     case present(Presentable)
     case embed(presentable: Presentable, container: Container)
+    case embedIndex(presentable: Presentable, container: Container, index: Int)
     case registerPeek(source: Container, transitionGenerator: () -> NavigationTransition)
     case pop
     case popToRoot
@@ -56,8 +58,10 @@ extension Transition where RootType == TransitionTypeVC {
         return Transition(type: .present(presentable), animation: animation)
     }
 
-    public static func embed(_ presentable: Presentable, in container: Container) -> Transition {
-        return Transition(type: .embed(presentable: presentable, container: container), animation: nil)
+    public static func embed(_ presentable: Presentable, in container: Container, to index: Int? = nil) -> Transition {
+        return index != nil ?
+            Transition(type: .embedIndex(presentable: presentable, container: container, index: index!), animation: nil) :
+            Transition(type: .embed(presentable: presentable, container: container), animation: nil)
     }
 
     public static func registerPeek<R: Route>(from source: Container, route: R, coordinator: AnyCoordinator<R>) -> Transition where R.RootType == TransitionTypeVC {
@@ -90,8 +94,10 @@ extension Transition where RootType == TransitionTypeNC {
         return Transition(type: .present(presentable), animation: animation)
     }
 
-    public static func embed(_ presentable: Presentable, in container: Container) -> Transition {
-        return Transition(type: .embed(presentable: presentable, container: container), animation: nil)
+    public static func embed(_ presentable: Presentable, in container: Container, to index: Int? = nil) -> Transition {
+        return index != nil ?
+            Transition(type: .embedIndex(presentable: presentable, container: container, index: index!), animation: nil) :
+            Transition(type: .embed(presentable: presentable, container: container), animation: nil)
     }
 
     public static func registerPeek<R: Route>(from source: Container, route: R, coordinator: AnyCoordinator<R>) -> Transition where R.RootType == TransitionTypeNC {
